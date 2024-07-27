@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(EndpointPath.DOCTOR_API)
+@RequestMapping(EndpointPath.DOCTOR)
 @RequiredArgsConstructor
 public class DoctorController {
 
     private final DoctorService service;
 
 
-    @PostMapping(EndpointPath.FIND)
+    @PostMapping("/find")
     public List<DoctorResponse> findAllByFilters(@RequestBody DoctorFindByFiltersRequest request) {
         return this.service.findAllByFilters(request);
     }

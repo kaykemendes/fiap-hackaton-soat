@@ -26,10 +26,12 @@ public class DoctorEntity {
 
     private String name;
 
+    @Column(unique=true)
     private String email;
 
     private String password;
 
+    @Column(unique=true)
     private String crm;
 
     private String specialty;
@@ -41,6 +43,5 @@ public class DoctorEntity {
     private List<AppointmentEntity> appointments;
 
     private Double rate;
-
 
 }

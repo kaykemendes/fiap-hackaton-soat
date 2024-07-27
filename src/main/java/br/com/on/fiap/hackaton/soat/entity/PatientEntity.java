@@ -22,10 +22,12 @@ public class PatientEntity {
     @Column(name = "id_patient", nullable = false)
     private Long id;
 
+    @Column(unique=true)
     private String cpf;
 
     private String name;
 
+    @Column(unique=true)
     private String email;
 
     private String password;
