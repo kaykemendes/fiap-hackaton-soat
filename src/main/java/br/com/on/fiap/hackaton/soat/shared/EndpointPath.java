@@ -4,11 +4,10 @@ public class EndpointPath {
 
     private static final String ROOT = "/api";
 
-    public static final String DOCTOR = ROOT + "/doctor";
+    public static final String DOCTOR = ROOT + "/medicos";
 
-    public static final String PATIENT = ROOT + "/patient";
+    public static final String PATIENT = ROOT + "/pacientes";
 
     public static final String LOGIN = ROOT + "/login";
-
 
 }

@@ -18,7 +18,7 @@ public class DoctorController {
     private final DoctorService service;
 
 
-    @PostMapping("/find")
+    @PostMapping("/busca")
     public List<DoctorResponse> findAllByFilters(@RequestBody DoctorFindByFiltersRequest request) {
         return this.service.findAllByFilters(request);
     }
