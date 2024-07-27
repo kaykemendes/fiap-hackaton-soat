@@ -1,6 +1,5 @@
 package br.com.on.fiap.hackaton.soat.entity;
 
-import br.com.on.fiap.hackaton.soat.domain.Person;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
@@ -18,23 +17,30 @@ import java.util.List;
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id")
 @Table(name = "doctor")
-public class DoctorEntity extends Person {
+public class DoctorEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_doctor", nullable = false)
     private Long id;
 
+    private String name;
+
+    private String email;
+
+    private String password;
+
     private String crm;
 
     private String specialty;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private AddressEntity address;
 
     @OneToMany
     private List<AppointmentEntity> appointments;
 
     private Double rate;
+
 
 }

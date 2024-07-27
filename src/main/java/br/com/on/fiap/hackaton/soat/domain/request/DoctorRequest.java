@@ -9,16 +9,18 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class DoctorFindByFiltersRequest {
+public class DoctorRequest {
 
-    private String name;
+    private String crm;
 
     private String specialty;
 
-    private Double latitude;
+    private AddressRequest address;
 
-    private Double longitude;
+    private String name;
 
-    private Double rate;
+    private String email;
+
+    private String password;
 
 }

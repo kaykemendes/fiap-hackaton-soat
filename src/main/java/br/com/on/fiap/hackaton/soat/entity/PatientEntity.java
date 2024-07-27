@@ -1,6 +1,5 @@
 package br.com.on.fiap.hackaton.soat.entity;
 
-import br.com.on.fiap.hackaton.soat.domain.Person;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
@@ -16,7 +15,7 @@ import lombok.*;
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id")
 @Table(name = "patient")
-public class PatientEntity extends Person {
+public class PatientEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,5 +23,11 @@ public class PatientEntity extends Person {
     private Long id;
 
     private String cpf;
+
+    private String name;
+
+    private String email;
+
+    private String password;
 
 }

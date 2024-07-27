@@ -9,16 +9,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class DoctorFindByFiltersRequest {
-
-    private String name;
-
-    private String specialty;
+public class AddressRequest {
 
     private Double latitude;
 
     private Double longitude;
-
-    private Double rate;
 
 }

@@ -1,4 +1,4 @@
-package br.com.on.fiap.hackaton.soat.domain.request;
+package br.com.on.fiap.hackaton.soat.domain.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,16 +9,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class DoctorFindByFiltersRequest {
-
-    private String name;
-
-    private String specialty;
+public class AddressResponse {
 
     private Double latitude;
 
     private Double longitude;
-
-    private Double rate;
 
 }
