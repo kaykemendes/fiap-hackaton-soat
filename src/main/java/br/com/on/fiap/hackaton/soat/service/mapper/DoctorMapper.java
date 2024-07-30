@@ -9,7 +9,10 @@ import org.mapstruct.Mapper;
 @Mapper(
         componentModel = "spring",
         injectionStrategy = InjectionStrategy.CONSTRUCTOR,
-        uses = { AddressMapper.class }
+        uses = {
+                AddressMapper.class,
+                AppointmentMapper.class
+        }
 )
 public interface DoctorMapper {
 

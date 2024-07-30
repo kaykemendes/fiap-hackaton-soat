@@ -24,6 +24,10 @@ public class AppointmentEntity {
     @Column(name = "id_appointment", nullable = false)
     private Long id;
 
+    private String date;
+
+    private String hour;
+
     private AppointmentStatus status;
 
     @OneToOne

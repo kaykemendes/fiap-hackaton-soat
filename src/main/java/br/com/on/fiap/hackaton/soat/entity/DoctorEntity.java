@@ -40,7 +40,7 @@ public class DoctorEntity {
     private AddressEntity address;
 
     @OneToMany
-    private List<AppointmentEntity> appointments;
+    private List<AppointmentEntity> appointment;
 
     private Double rate;
 

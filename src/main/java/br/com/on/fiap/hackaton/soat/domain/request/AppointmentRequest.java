@@ -1,5 +1,6 @@
 package br.com.on.fiap.hackaton.soat.domain.request;
 
+import br.com.on.fiap.hackaton.soat.domain.AppointmentStatus;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,16 +10,16 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class PatientRequest {
+public class AppointmentRequest {
 
     private Long id;
 
-    private String cpf;
+    private String date;
 
-    private String name;
+    private String hour;
 
-    private String email;
+    private AppointmentStatus status;
 
-    private String password;
+    private PatientRequest patient;
 
 }
